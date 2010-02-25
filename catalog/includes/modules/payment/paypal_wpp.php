@@ -369,6 +369,8 @@
             } else {
               $this->away_with_you(MODULE_PAYMENT_PAYPAL_DP_TEXT_STATE_ERROR);
             }
+          } else {
+            $the_state = $state;
           }
           
           break;
