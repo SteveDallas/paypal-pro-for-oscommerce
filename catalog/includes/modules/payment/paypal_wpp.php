@@ -18,7 +18,7 @@
       global $order;
       $this->code = 'paypal_wpp';
       $this->codeTitle = 'PayPal Website Payments Pro Plus';
-      $this->codeVersion = '1.0.7';
+      $this->codeVersion = '1.0.9';
       $this->debug_email = STORE_OWNER_EMAIL_ADDRESS;
       
       /* This variable stores the transaction request */
