@@ -1607,6 +1607,11 @@
               $error_occurred = true;
               $error_log = $this->return_transaction_errors($final_req['DoDirectPaymentResponse'][0]['Errors']);
             }
+		  } elseif ($final_req['faultcode'] != '') {
+		    //There was an error in our request syntax
+			//This should never occur in production
+            $error_occurred = true;
+            $error_log = $this->return_transaction_errors($final_req['faultstring']);
           } else {
             //Do a transaction search to make sure the connection didn't just timeout
             //It searches by email of payer and amount.  That should be accurate enough
